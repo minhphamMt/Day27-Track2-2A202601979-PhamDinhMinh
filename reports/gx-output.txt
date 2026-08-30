@@ -1,0 +1,7 @@
+ExpectColumnValuesToNotBeNull            success=True
+ExpectColumnValuesToBeUnique             success=True
+ExpectColumnValuesToBeBetween            success=True
+ExpectColumnValuesToBeInSet              success=True
+
+GX suite/checkpoint result: PASS
+Severity actions: critical -> block; warning -> quarantine; info -> warn

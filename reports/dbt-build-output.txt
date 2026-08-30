@@ -1,0 +1,50 @@
+12:33:33  Running with dbt=1.12.3
+12:33:34  Registered adapter: duckdb=1.11.0
+12:33:34  Found 3 models, 12 data tests, 2 seeds, 500 macros, 2 unit tests
+12:33:34
+12:33:34  Concurrency: 4 threads (target='dev')
+12:33:34
+12:33:34  1 of 19 START seed file main.customers ......................................... [RUN]
+12:33:34  2 of 19 START seed file main.orders ............................................ [RUN]
+12:33:34  1 of 19 OK loaded seed file main.customers ..................................... [INSERT 81 in 0.11s]
+12:33:34  3 of 19 START sql view model main.stg_customers ................................ [RUN]
+12:33:34  2 of 19 OK loaded seed file main.orders ........................................ [INSERT 600 in 0.17s]
+12:33:34  4 of 19 START sql view model main.stg_orders ................................... [RUN]
+12:33:35  3 of 19 OK created sql view model main.stg_customers ........................... [OK in 0.07s]
+12:33:35  5 of 19 START test accepted_values_stg_customers_country__AU__US__VN__SG ....... [RUN]
+12:33:35  6 of 19 START test not_null_stg_customers_customer_id .......................... [RUN]
+12:33:35  7 of 19 START test not_null_stg_customers_is_active ............................ [RUN]
+12:33:35  5 of 19 PASS accepted_values_stg_customers_country__AU__US__VN__SG ............. [PASS in 0.09s]
+12:33:35  6 of 19 PASS not_null_stg_customers_customer_id ................................ [PASS in 0.09s]
+12:33:35  7 of 19 PASS not_null_stg_customers_is_active .................................. [PASS in 0.09s]
+12:33:35  4 of 19 OK created sql view model main.stg_orders .............................. [OK in 0.12s]
+12:33:35  8 of 19 START test accepted_values_stg_orders_currency__USD__VND ............... [RUN]
+12:33:35  9 of 19 START test accepted_values_stg_orders_status__pending__completed__refunded__cancelled  [RUN]
+12:33:35  10 of 19 START test not_null_stg_orders_customer_id ............................ [RUN]
+12:33:35  11 of 19 START test not_null_stg_orders_order_id ............................... [RUN]
+12:33:35  8 of 19 PASS accepted_values_stg_orders_currency__USD__VND ..................... [PASS in 0.08s]
+12:33:35  9 of 19 PASS accepted_values_stg_orders_status__pending__completed__refunded__cancelled  [PASS in 0.08s]
+12:33:35  10 of 19 PASS not_null_stg_orders_customer_id .................................. [PASS in 0.08s]
+12:33:35  11 of 19 PASS not_null_stg_orders_order_id ..................................... [PASS in 0.08s]
+12:33:35  12 of 19 START test unique_stg_orders_order_id ................................. [RUN]
+12:33:35  12 of 19 PASS unique_stg_orders_order_id ....................................... [PASS in 0.02s]
+12:33:35  13 of 19 START unit_test fct_daily_revenue::completed_orders_sum_to_expected_revenue  [RUN]
+12:33:35  13 of 19 PASS fct_daily_revenue::completed_orders_sum_to_expected_revenue ...... [PASS in 0.12s]
+12:33:35  14 of 19 START unit_test fct_daily_revenue::active_customer_scd_does_not_inflate_revenue  [RUN]
+12:33:35  14 of 19 PASS fct_daily_revenue::active_customer_scd_does_not_inflate_revenue .. [PASS in 0.06s]
+12:33:35  15 of 19 START sql table model main.fct_daily_revenue .......................... [RUN]
+12:33:35  15 of 19 OK created sql table model main.fct_daily_revenue ..................... [OK in 0.06s]
+12:33:35  16 of 19 START test assert_nonnegative_revenue ................................. [RUN]
+12:33:35  17 of 19 START test not_null_fct_daily_revenue_completed_order_rows ............ [RUN]
+12:33:35  18 of 19 START test not_null_fct_daily_revenue_daily_revenue ................... [RUN]
+12:33:35  19 of 19 START test not_null_fct_daily_revenue_order_date ...................... [RUN]
+12:33:35  16 of 19 PASS assert_nonnegative_revenue ....................................... [PASS in 0.05s]
+12:33:35  18 of 19 PASS not_null_fct_daily_revenue_daily_revenue ......................... [PASS in 0.05s]
+12:33:35  17 of 19 PASS not_null_fct_daily_revenue_completed_order_rows .................. [PASS in 0.05s]
+12:33:35  19 of 19 PASS not_null_fct_daily_revenue_order_date ............................ [PASS in 0.06s]
+12:33:35
+12:33:35  Finished running 2 seeds, 1 table model, 12 data tests, 2 unit tests, 2 view models in 0 hours 0 minutes and 0.87 seconds (0.87s).
+12:33:35
+12:33:35  Completed successfully
+12:33:35
+12:33:35  Done. PASS=19 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=19

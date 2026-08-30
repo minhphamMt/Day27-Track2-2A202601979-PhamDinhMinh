@@ -1,0 +1,82 @@
+{
+  "generated_at": "2026-08-30T12:31:21.176331+00:00",
+  "student": "Phạm Đình Minh (2A202601979)",
+  "scenarios": {
+    "healthy": {
+      "baseline_output": [
+        "=== DATA RELIABILITY BASELINE ===",
+        "orders rows              : 600",
+        "contract failed checks   : 0",
+        "critical contract fails  : 0",
+        "KB contract failed checks: 0",
+        "row-count anomaly        : False (auto:mad, score=0.75)",
+        "freshness minutes        : 5.0",
+        "KB length anomaly        : False",
+        "sample blast radius      : fct_daily_revenue, ceo_revenue_dashboard",
+        "report                    : reports\\latest_metrics.json"
+      ],
+      "metrics_file": "reports/game-day-healthy.json",
+      "orders_rows": 600,
+      "orders_failed_checks": 0,
+      "kb_failed_checks": 0,
+      "row_count_anomaly": false
+    },
+    "duplicate_pk": {
+      "baseline_output": [
+        "=== DATA RELIABILITY BASELINE ===",
+        "orders rows              : 603",
+        "contract failed checks   : 1",
+        "critical contract fails  : 1",
+        "KB contract failed checks: 0",
+        "row-count anomaly        : False (auto:mad, score=0.85)",
+        "freshness minutes        : 5.0",
+        "KB length anomaly        : False",
+        "sample blast radius      : fct_daily_revenue, ceo_revenue_dashboard",
+        "report                    : reports\\latest_metrics.json"
+      ],
+      "metrics_file": "reports/game-day-duplicate_pk.json",
+      "orders_rows": 603,
+      "orders_failed_checks": 1,
+      "kb_failed_checks": 0,
+      "row_count_anomaly": false
+    },
+    "volume_drop": {
+      "baseline_output": [
+        "=== DATA RELIABILITY BASELINE ===",
+        "orders rows              : 150",
+        "contract failed checks   : 0",
+        "critical contract fails  : 0",
+        "KB contract failed checks: 0",
+        "row-count anomaly        : True (auto:mad, score=13.36)",
+        "freshness minutes        : 5.0",
+        "KB length anomaly        : False",
+        "sample blast radius      : fct_daily_revenue, ceo_revenue_dashboard",
+        "report                    : reports\\latest_metrics.json"
+      ],
+      "metrics_file": "reports/game-day-volume_drop.json",
+      "orders_rows": 150,
+      "orders_failed_checks": 0,
+      "kb_failed_checks": 0,
+      "row_count_anomaly": true
+    },
+    "stale_kb": {
+      "baseline_output": [
+        "=== DATA RELIABILITY BASELINE ===",
+        "orders rows              : 600",
+        "contract failed checks   : 0",
+        "critical contract fails  : 0",
+        "KB contract failed checks: 1",
+        "row-count anomaly        : False (auto:mad, score=0.75)",
+        "freshness minutes        : 5.0",
+        "KB length anomaly        : False",
+        "sample blast radius      : fct_daily_revenue, ceo_revenue_dashboard",
+        "report                    : reports\\latest_metrics.json"
+      ],
+      "metrics_file": "reports/game-day-stale_kb.json",
+      "orders_rows": 600,
+      "orders_failed_checks": 0,
+      "kb_failed_checks": 1,
+      "row_count_anomaly": false
+    }
+  }
+}
